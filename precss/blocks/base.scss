@@ -1,0 +1,121 @@
+body {
+    background-image: url("../img/bg/bg-lines.png");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: initial;
+    font-family: sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+
+    @media (min-width: 1254px) {
+        width: 1224px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.read-more-link {
+    color: #333333;
+    font-family: 'League-Spartan';
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 66px;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        content: '';
+        height: 2px;
+        background-color: #5da8ef;
+        opacity: 0.7;
+        transform: scale(0);
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        &::after {
+            transform: scale(1);
+        }
+    }
+}
+
+.title {
+    color: #333333;
+    font-family: 'Playfair Display';
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.42px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    display: block;
+    color: #5da8ef;
+    font-family: 'League-Spartan';
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: 5.4px;
+    text-transform: uppercase;
+}
+
+.desc-text {
+    color: rgba(97, 97, 97, 0.6);
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.35px;
+}
+
+.title-desc {
+    @extend .desc-text;
+    margin-bottom: 35px;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
